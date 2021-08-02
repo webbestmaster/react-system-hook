@@ -1,0 +1,19 @@
+{
+  "name": "react-system-hook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbestmaster/react-system-hook.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webbestmaster/react-system-hook/issues"
+  },
+  "homepage": "https://github.com/webbestmaster/react-system-hook#readme"
+}
