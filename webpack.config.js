@@ -1,8 +1,5 @@
 const path = require('path');
 
-// eslint-disable-next-line no-unused-vars
-// const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
-
 const {
     pathToStaticFileFolder,
     isDevelopment,
@@ -74,6 +71,8 @@ const webpackConfigBuildLibrary = {
     },
 };
 
+// eslint-disable-next-line no-unused-vars
+// const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 // webpackConfig.plugins.push(new BundleAnalyzerPlugin());
 
 module.exports = isBuildLibrary ? webpackConfigBuildLibrary : webpackConfig;

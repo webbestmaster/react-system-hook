@@ -1,6 +1,6 @@
 {
     "extends": "./tsconfig.json",
-    "include": ["www/library/**/*"],
+    "include": ["www/library/*"],
     "compilerOptions": {
         // Generate d.ts files
         "declaration": true,
