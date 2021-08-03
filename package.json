@@ -1,9 +1,9 @@
 {
   "name": "react-system-hook",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "",
   "main": "dist/index.js",
-  "types": "dist/library.d.ts",
+  "types": "dist/library/library.d.ts",
   "files": [
     "/dist"
   ],
@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/webbestmaster/react-system-hook#readme",
   "engines": {
-    "node": "^16.0.0",
-    "npm": "^7.0.0"
+    "node": "^14.0.0",
+    "npm": "^6.0.0"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-cli serve --progress",
