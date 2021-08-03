@@ -1,12 +1,11 @@
 const path = require('path');
 
 // eslint-disable-next-line no-unused-vars
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+// const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 
 const {
     pathToStaticFileFolder,
     isDevelopment,
-    isProduction,
     pathToDist,
     cwd,
     nodeEnvironment,
@@ -39,7 +38,7 @@ const webpackConfig = {
 };
 
 const webpackConfigBuildLibrary = {
-    entry: ['./www/test-library/test-library.tsx'],
+    entry: ['./www/library/library.ts'],
     output: {
         pathinfo: false,
         path: path.join(cwd, 'dist'),

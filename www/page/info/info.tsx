@@ -5,13 +5,12 @@ import {lazy, Suspense, useEffect, useState} from 'react';
 import {Locale, useLocale} from '../../provider/locale/locale-context';
 import {Spinner} from '../../layout/spinner/spinner';
 import {ErrorData} from '../../layout/error-data/error-data';
-import {useSystem} from '../../hook/system-hook/system-hook';
+import {useSystem, useScreenSize, useScreenWidth, useScreenHeight} from '../../library/library';
 import {NavigationLink} from '../../hook/url-hook/navigation-link';
 import {appRoute} from '../../component/app/app-route';
 import pngImageSrc from '../home/image/marker-icon-2x.png';
 import svgImageSrc, {ReactComponent as SvgAsReactComponent} from '../home/image/questions-with-an-official-answer.svg';
 import homeStyle from '../home/home.scss';
-import {useScreenSize} from '../../hook/system-hook/screen-size-hook';
 
 console.log(ErrorData);
 
@@ -27,6 +26,9 @@ export function Info(): JSX.Element {
     const {getLocalizedString} = useLocale();
     const screen = useSystem();
     const screenSize = useScreenSize();
+
+    const screenWidth = useScreenWidth();
+    const screenHeight = useScreenHeight();
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -49,6 +51,9 @@ export function Info(): JSX.Element {
 
             <pre>{JSON.stringify(screen, null, 4)}</pre>
             <pre>{JSON.stringify(screenSize, null, 4)}</pre>
+            <h3>
+                {screenWidth}x{screenHeight}
+            </h3>
 
             <Locale stringKey="BUTTON__APPLY" />
 

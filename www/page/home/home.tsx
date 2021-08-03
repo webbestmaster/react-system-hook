@@ -5,13 +5,12 @@ import {lazy, Suspense, useEffect, useState} from 'react';
 import {Locale, useLocale} from '../../provider/locale/locale-context';
 import {Spinner} from '../../layout/spinner/spinner';
 import {ErrorData} from '../../layout/error-data/error-data';
-import {useSystem} from '../../hook/system-hook/system-hook';
+import {useSystem} from '../../library/library';
 import {NavigationLink} from '../../hook/url-hook/navigation-link';
 import {appRoute} from '../../component/app/app-route';
 import {LocaleNameEnum} from '../../provider/locale/locale-context-type';
 import {useFormat} from '../../hook/format-hook/format-hook';
 import {getTestNodeData, getTestNodeId} from '../../util/auto-test';
-import {TestLibrary} from '../../test-library/test-library';
 
 import pngImageSrc from './image/marker-icon-2x.png';
 import svgImageSrc, {ReactComponent as SvgAsReactComponent} from './image/questions-with-an-official-answer.svg';
@@ -84,10 +83,6 @@ export function Home(): JSX.Element {
             <Suspense fallback={<Spinner position="absolute" />}>
                 <LoadMeAsyncLazy smth="home" />
             </Suspense>
-
-            <TestLibrary textContent="Hello, World">
-                <p>inner text</p>
-            </TestLibrary>
         </div>
     );
 }

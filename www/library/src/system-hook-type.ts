@@ -20,8 +20,6 @@ export type SystemScreenDataType = Readonly<{
 }>;
 
 export type SystemHookType = Readonly<{
-    isAndroid: boolean;
     isBrowser: boolean;
-    isIOS: boolean;
     screen: SystemScreenDataType;
 }>;

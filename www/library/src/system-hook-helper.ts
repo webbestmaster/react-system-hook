@@ -1,4 +1,4 @@
-/* global window, document, navigator */
+/* global window, document */
 import {RectangleSizeType, ScreenWidthNameEnum, SystemScreenDataType} from './system-hook-type';
 import {defaultScreenSize, screenMinWidth} from './system-hook-const';
 
@@ -39,10 +39,6 @@ export function getDevicePixelRatio(): number {
 
     const {devicePixelRatio} = window;
 
-    if (typeof devicePixelRatio !== 'number' || Number.isNaN(devicePixelRatio)) {
-        return defaultDevicePixelRatio;
-    }
-
     if (devicePixelRatio <= defaultDevicePixelRatio) {
         return defaultDevicePixelRatio;
     }
@@ -65,6 +61,7 @@ export function getScreenState(width: number, height: number): SystemScreenDataT
     };
 }
 
+/*
 export function getIsIOS(): boolean {
     if (typeof navigator === 'undefined') {
         return false;
@@ -80,3 +77,4 @@ export function getIsAndroid(): boolean {
 
     return /(android)/i.test(navigator.userAgent);
 }
+*/

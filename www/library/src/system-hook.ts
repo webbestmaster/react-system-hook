@@ -5,12 +5,10 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {debounce} from '../../util/function';
 
 import {ScreenWidthNameEnum, SystemHookType, SystemScreenDataType} from './system-hook-type';
-import {getIsAndroid, getIsIOS, getScreenSize, getScreenState} from './system-hook-helper';
+import {getScreenSize, getScreenState} from './system-hook-helper';
 
 export function useSystem(): SystemHookType {
-    const isAndroid = getIsAndroid();
     const isBrowser = typeof window !== 'undefined';
-    const isIOS = getIsIOS();
 
     const {width: defaultWidth, height: defaultHeight} = getScreenSize();
 
@@ -77,6 +75,6 @@ export function useSystem(): SystemHookType {
     }, [devicePixelRatio, isDesktop, isLandscape, isMobile, isPortrait, isTablet, name]);
 
     return useMemo((): SystemHookType => {
-        return {isAndroid, isBrowser, isIOS, screen: systemScreen};
-    }, [isAndroid, isBrowser, isIOS, systemScreen]);
+        return {isBrowser, screen: systemScreen};
+    }, [isBrowser, systemScreen]);
 }
