@@ -73,13 +73,5 @@ export function objectToUrlParameters(options: ObjectToUrlParametersType): strin
 export function getParametersFromUrl(fullUrlString: string): QueryMapType {
     const url: URL = new URL(fullUrlString);
 
-    const {searchParams} = url;
-
-    const keyList: Array<string> = [...searchParams.keys()];
-
-    return keyList.reduce((data: QueryMapType, key: string): QueryMapType => {
-        const value = String(searchParams.get(key));
-
-        return {...data, [key]: value};
-    }, {});
+    return Object.fromEntries(url.searchParams.entries());
 }
