@@ -2,8 +2,7 @@
 
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
-import {debounce} from '../../util/function';
-
+import {debounce} from './util/function';
 import {RectangleSizeType} from './system-hook-type';
 import {getScreenSize} from './system-hook-helper';
 

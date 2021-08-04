@@ -2,7 +2,7 @@
 
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
-import {debounce} from '../../util/function';
+import {debounce} from './util/function';
 
 import {ScreenWidthNameEnum, SystemHookType, SystemScreenDataType} from './system-hook-type';
 import {getScreenSize, getScreenState} from './system-hook-helper';

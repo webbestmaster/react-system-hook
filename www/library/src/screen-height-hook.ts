@@ -2,8 +2,7 @@
 
 import {useCallback, useEffect, useState} from 'react';
 
-import {debounce} from '../../util/function';
-
+import {debounce} from './util/function';
 import {getScreenSize} from './system-hook-helper';
 
 export function useScreenHeight(): number {
