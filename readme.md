@@ -5,7 +5,7 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-system-hook)
 [![GitHub stars](https://img.shields.io/github/stars/webbestmaster/react-system-hook?style=social&maxAge=2592000)](https://github.com/webbestmaster/react-system-hook/)
 
-Several hooks\helper to work with device's screen.
+Several hooks\helpers to work with device's screen.
 
 ## Install
 
