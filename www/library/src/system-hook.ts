@@ -62,7 +62,7 @@ export function useSystem(): SystemHookType {
         };
     }, [handleResize]);
 
-    const systemScreen: SystemScreenDataType = useMemo((): SystemScreenDataType => {
+    const screenInfo: SystemScreenDataType = useMemo((): SystemScreenDataType => {
         return {
             devicePixelRatio,
             isDesktop,
@@ -75,6 +75,6 @@ export function useSystem(): SystemHookType {
     }, [devicePixelRatio, isDesktop, isLandscape, isMobile, isPortrait, isTablet, name]);
 
     return useMemo((): SystemHookType => {
-        return {isBrowser, screen: systemScreen};
-    }, [isBrowser, systemScreen]);
+        return {isBrowser, screenInfo};
+    }, [isBrowser, screenInfo]);
 }

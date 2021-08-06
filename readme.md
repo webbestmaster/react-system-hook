@@ -1,19 +1,35 @@
-MIT License
+# react-system-hook
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Several hooks\helper to work with device's screen.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## How to use
+```typescript jsx
+import {useSystem, useScreenHeight, useScreenWidth, useScreenSize} from 'react-system-hook';
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+export function ExampleComponent(): JSX.Element {
+    const {
+        screenInfo,
+        isBrowser, // true if running in browser, false for SSR
+    } = useSystem();
+
+    const {
+        devicePixelRatio, // number, default: 2, usually is 2 for smartphones
+        isLandscape, // true if width > height
+        isMobile, // screen width < 768
+        isPortrait, // opposite for isLandscape
+        name, // ScreenWidthNameEnum, relative from screen width: 'desktop', 'mobile' or 'tablet'
+        isTablet, // screen width < 980 and >= 768
+        isDesktop, // screen width >= 980
+    } = screenInfo;
+
+    const {
+        height, // number, default: 768
+        width, // number, default: 980
+    } = useScreenSize();
+
+    const screenWidth = useScreenWidth(); // number, default: 980
+    const screenHeight = useScreenHeight(); // number, default: 768
+
+    return <div />;
+}
+```

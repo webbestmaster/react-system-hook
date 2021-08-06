@@ -21,5 +21,5 @@ export type SystemScreenDataType = Readonly<{
 
 export type SystemHookType = Readonly<{
     isBrowser: boolean;
-    screen: SystemScreenDataType;
+    screenInfo: SystemScreenDataType;
 }>;
