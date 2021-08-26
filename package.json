@@ -36,7 +36,7 @@
     "prettier": "prettier --write \"./**/*.(js|ts|tsx)\" --loglevel warn",
     "tsc": "tsc -p ./tsconfig.json",
     "tsc-library": "tsc -p ./tsconfig.library.json",
-    "ts-coverage": "typescript-coverage-report --threshold=99.95 --strict=true --project ./www/",
+    "ts-coverage": "typescript-coverage-report --threshold=100 --strict=true --project ./www/",
     "test:e2e": "jest --config='test-e2e/config/jest.config.js' ./test-e2e/ --runInBand",
     "pre-commit-hook": "npm run check"
   },
