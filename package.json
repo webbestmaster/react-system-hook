@@ -1,6 +1,6 @@
 {
   "name": "react-system-hook",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/library.d.ts",
@@ -38,8 +38,7 @@
     "tsc-library": "tsc -p ./tsconfig.library.json",
     "ts-coverage": "typescript-coverage-report --threshold=99.95 --strict=true --project ./www/",
     "test:e2e": "jest --config='test-e2e/config/jest.config.js' ./test-e2e/ --runInBand",
-    "pre-commit-hook": "npm run check",
-    "postinstall": "cp ./git-hooks/pre-commit ./.git/hooks"
+    "pre-commit-hook": "npm run check"
   },
   "peerDependencies": {
     "@types/react": "^17.0.15",
