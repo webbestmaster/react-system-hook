@@ -1,6 +1,6 @@
 {
   "name": "react-system-hook",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/library.d.ts",
@@ -41,7 +41,7 @@
     "pre-commit-hook": "npm run check",
     "postinstall": "cp ./git-hooks/pre-commit ./.git/hooks"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
