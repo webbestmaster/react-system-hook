@@ -9,8 +9,6 @@ const styleLoader = {
 };
 
 const cssLoader = isProduction ? MiniCssExtractPlugin.loader : styleLoader;
-const fileNameMask = isProduction ? '[md5:hash:hex:7].[ext]' : '[name]-[md5:hash:hex:7].[ext]';
-const fileLoader = {loader: 'file-loader', options: {name: fileNameMask, limit: 0}};
 
 module.exports.rules = [
     {
@@ -35,10 +33,6 @@ module.exports.rules = [
                 maxSize: 0, // 0 byte
             },
         },
-    },
-    {
-        test: /\.svg$/,
-        use: ['@svgr/webpack', fileLoader],
     },
     {
         test: /\.scss$/,

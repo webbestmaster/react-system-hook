@@ -15,7 +15,13 @@ npm i react-system-hook
 
 ## Usage
 ```typescript jsx
-import {useSystem, useScreenHeight, useScreenWidth, useScreenSize} from 'react-system-hook';
+import {
+    useSystem,
+    useScreenHeight,
+    useScreenWidth,
+    useScreenSize,
+    useDocumentVisibility,
+} from 'react-system-hook';
 
 export function ExampleApp(): JSX.Element {
     const {
@@ -41,6 +47,8 @@ export function ExampleApp(): JSX.Element {
     const screenWidth = useScreenWidth(); // number, default: 980
     const screenHeight = useScreenHeight(); // number, default: 768
 
+    const isDocumentVisible = useDocumentVisibility(); // true or false
+
     return (
         <div>
             <pre>screenInfo = {JSON.stringify(screenInfo, null, 4)}</pre>
@@ -49,6 +57,7 @@ export function ExampleApp(): JSX.Element {
             </pre>
             <pre>useScreenWidth = width: {screenWidth}</pre>
             <pre>useScreenHeight = height: {screenHeight}</pre>
+            <pre>useDocumentVisibility, is document visible: {isDocumentVisible ? 'yes' : 'no'}</pre>
         </div>
     );
 }
