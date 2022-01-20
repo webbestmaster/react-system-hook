@@ -13,12 +13,12 @@ export function useDocumentVisibility(): boolean {
     }, []);
 
     useEffect(() => {
-        const handleResizeDebounced = debounce<[]>(handleVisibilityChange, 150);
+        const handleVisibilityChangeDebounced = debounce<[]>(handleVisibilityChange, 150);
 
-        document.addEventListener('visibilitychange', handleResizeDebounced, {capture: false, passive: true});
+        document.addEventListener('visibilitychange', handleVisibilityChangeDebounced, {capture: false, passive: true});
 
         return () => {
-            document.removeEventListener('visibilitychange', handleResizeDebounced, {capture: false});
+            document.removeEventListener('visibilitychange', handleVisibilityChangeDebounced, {capture: false});
         };
     }, [handleVisibilityChange]);
 
