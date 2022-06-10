@@ -21,6 +21,9 @@ import {
     useScreenWidth,
     useScreenSize,
     useDocumentVisibility,
+    ScreenWidthNameEnum,
+    screenMinWidth, // object: Record<ScreenWidthNameEnum, number>
+    getScreenName, // (screenWidth: number) => ScreenWidthNameEnum
 } from 'react-system-hook';
 
 export function ExampleApp(): JSX.Element {
@@ -35,16 +38,16 @@ export function ExampleApp(): JSX.Element {
         isMobile, // screen width < 768
         isPortrait, // opposite for isLandscape
         name, // ScreenWidthNameEnum, relative from screen width: 'desktop', 'mobile' or 'tablet'
-        isTablet, // screen width < 980 and >= 768
-        isDesktop, // screen width >= 980
+        isTablet, // screen width < 1024 and width >= 768
+        isDesktop, // screen width >= 1024
     } = screenInfo;
 
     const {
         height, // number, default: 768
-        width, // number, default: 980
+        width, // number, default: 1024
     } = useScreenSize();
 
-    const screenWidth = useScreenWidth(); // number, default: 980
+    const screenWidth = useScreenWidth(); // number, default: 1024
     const screenHeight = useScreenHeight(); // number, default: 768
 
     const isDocumentVisible = useDocumentVisibility(); // true or false

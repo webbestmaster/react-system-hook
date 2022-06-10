@@ -2,7 +2,7 @@
 import {RectangleSizeType, ScreenWidthNameEnum, SystemScreenDataType} from './system-hook-type';
 import {defaultScreenSize, screenMinWidth} from './system-hook-const';
 
-function getScreenName(screenWidth: number): ScreenWidthNameEnum {
+export function getScreenName(screenWidth: number): ScreenWidthNameEnum {
     if (screenWidth >= screenMinWidth[ScreenWidthNameEnum.desktop]) {
         return ScreenWidthNameEnum.desktop;
     }

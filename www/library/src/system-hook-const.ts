@@ -1,7 +1,7 @@
 import {RectangleSizeType, ScreenWidthNameEnum} from './system-hook-type';
 
-export const screenMinWidth: {[key in ScreenWidthNameEnum]: number} = {
-    [ScreenWidthNameEnum.desktop]: 980,
+export const screenMinWidth: Record<ScreenWidthNameEnum, number> = {
+    [ScreenWidthNameEnum.desktop]: 1024,
     [ScreenWidthNameEnum.mobile]: 320,
     [ScreenWidthNameEnum.tablet]: 768,
 };

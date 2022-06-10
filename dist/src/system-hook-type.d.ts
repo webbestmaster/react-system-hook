@@ -1,7 +1,7 @@
 export declare enum ScreenWidthNameEnum {
-    'desktop' = "desktop",
-    'mobile' = "mobile",
-    'tablet' = "tablet"
+    desktop = "desktop",
+    mobile = "mobile",
+    tablet = "tablet"
 }
 export declare type RectangleSizeType = Readonly<{
     height: number;

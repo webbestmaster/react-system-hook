@@ -1,6 +1,15 @@
 /* eslint-disable no-unused-vars, @typescript-eslint/no-unused-vars */
 
-import {useSystem, useScreenHeight, useScreenWidth, useScreenSize, useDocumentVisibility} from '../../library/library';
+import {
+    useSystem,
+    useScreenHeight,
+    useScreenWidth,
+    useScreenSize,
+    useDocumentVisibility,
+    ScreenWidthNameEnum,
+    screenMinWidth, // object: Record<ScreenWidthNameEnum, number>
+    getScreenName, // (screenWidth: number) => ScreenWidthNameEnum
+} from '../../library/library';
 
 export function ExampleApp(): JSX.Element {
     const {
