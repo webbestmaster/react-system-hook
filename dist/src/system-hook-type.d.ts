@@ -3,11 +3,11 @@ export declare enum ScreenWidthNameEnum {
     mobile = "mobile",
     tablet = "tablet"
 }
-export declare type RectangleSizeType = Readonly<{
+export type RectangleSizeType = Readonly<{
     height: number;
     width: number;
 }>;
-export declare type SystemScreenDataType = Readonly<{
+export type SystemScreenDataType = Readonly<{
     devicePixelRatio: number;
     isDesktop: boolean;
     isLandscape: boolean;
@@ -16,7 +16,7 @@ export declare type SystemScreenDataType = Readonly<{
     isTablet: boolean;
     name: ScreenWidthNameEnum;
 }>;
-export declare type SystemHookType = Readonly<{
+export type SystemHookType = Readonly<{
     isBrowser: boolean;
     screenInfo: SystemScreenDataType;
 }>;

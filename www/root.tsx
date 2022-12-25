@@ -8,12 +8,12 @@ import {ExampleApp} from './component/app/example-app';
 
 const nodeWrapper = document.querySelector(selector.appWrapper);
 
-if (nodeWrapper !== null) {
+if (nodeWrapper === null) {
+    console.error('Can not find nodeWrapper');
+} else {
     createRoot(nodeWrapper).render(
         <StrictMode>
             <ExampleApp />
         </StrictMode>
     );
-} else {
-    console.error('Can not find nodeWrapper');
 }
