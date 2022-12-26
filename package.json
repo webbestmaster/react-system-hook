@@ -1,7 +1,13 @@
 {
   "name": "react-system-hook",
   "version": "1.0.5",
-  "description": "",
+  "description": "Several react hooks and helpers to work with device's screen",
+  "keywords": [
+    "system",
+    "screen",
+    "device",
+    "react"
+  ],
   "main": "dist/index.js",
   "types": "dist/library.d.ts",
   "files": [
