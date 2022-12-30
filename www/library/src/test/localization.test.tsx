@@ -1,12 +1,14 @@
+/* global window, Event */
 /* eslint-disable sonarjs/no-duplicate-string */
 
 import assert from 'node:assert/strict';
 
 import {describe, test} from '@jest/globals';
 
-import {render} from '@testing-library/react';
+import {render, act} from '@testing-library/react';
 
 import {useSystem, useScreenSize, useScreenWidth, useScreenHeight, useDocumentVisibility} from '../../library';
+import {waitForTime} from '../../../../test-unit/util';
 
 describe('System hooks', () => {
     test('Just get all available data', async () => {
@@ -31,6 +33,13 @@ describe('System hooks', () => {
         }
 
         const {unmount} = render(<InnerComponent />);
+
+        act(() => {
+            window.dispatchEvent(new Event('resize'));
+            window.document.dispatchEvent(new Event('visibilitychange'));
+        });
+
+        await waitForTime(1000);
 
         unmount();
     });
