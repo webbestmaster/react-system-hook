@@ -1,0 +1,1 @@
+{"version":3,"file":"system.js","sourceRoot":"","sources":["../../../www/library/src/util/system.ts"],"names":[],"mappings":"AAAA,qBAAqB;AAErB,MAAM,UAAU,oBAAoB;IAChC,IAAI,OAAO,QAAQ,KAAK,WAAW,EAAE;QACjC,OAAO,KAAK,CAAC;KAChB;IAED,OAAO,QAAQ,CAAC,eAAe,KAAK,SAAS,CAAC;AAClD,CAAC"}

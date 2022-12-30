@@ -36,5 +36,5 @@ jobs:
     - run: npm run front:build-library
     - run: npm run check
     - run: npm run test:unit
-#    - name: Upload coverage to Codecov
-#      uses: codecov/codecov-action@v3
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
