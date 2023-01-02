@@ -12,6 +12,7 @@
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/webbestmaster/react-system-hook/github-ci.yml)](https://github.com/webbestmaster/react-system-hook/actions/workflows/github-ci.yml)
 [![Type definitions](https://img.shields.io/npm/types/react-system-hook)](https://www.typescriptlang.org)
 [![Website](https://img.shields.io/website?url=https://github.com/webbestmaster/react-system-hook)](https://github.com/webbestmaster/react-system-hook)
+[![Package Quality](https://packagequality.com/shield/react-system-hook.svg)](https://packagequality.com/#?package=react-system-hook)
 [![GitHub stars](https://img.shields.io/github/stars/webbestmaster/react-system-hook?style=social)](https://github.com/webbestmaster/react-system-hook)
 
 
