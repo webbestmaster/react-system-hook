@@ -5,7 +5,6 @@
 [![npm version](https://img.shields.io/npm/v/react-system-hook.svg)](https://www.npmjs.com/package/react-system-hook)
 [![Known Vulnerabilities](https://snyk.io/test/github/webbestmaster/react-system-hook/badge.svg)](https://snyk.io/test/github/webbestmaster/react-system-hook)
 [![Dependency count](https://badgen.net/bundlephobia/dependency-count/react-system-hook)](https://libraries.io/npm/react-system-hook)
-[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/webbestmaster/react-system-hook)](https://libraries.io/npm/react-system-hook)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-system-hook)](https://bundlephobia.com/package/react-system-hook)
 [![nodejs version](https://img.shields.io/node/v/react-system-hook)](https://nodejs.org/en/docs)
 [![Github CI](https://github.com/webbestmaster/react-system-hook/actions/workflows/github-ci.yml/badge.svg)](https://github.com/webbestmaster/react-system-hook/actions/workflows/github-ci.yml)
@@ -16,6 +15,10 @@
 [![Package Quality](https://packagequality.com/shield/react-system-hook.svg)](https://packagequality.com/#?package=react-system-hook)
 [![GitHub stars](https://img.shields.io/github/stars/webbestmaster/react-system-hook?style=social)](https://github.com/webbestmaster/react-system-hook)
 
+
+<!--
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/webbestmaster/react-system-hook)](https://libraries.io/npm/react-system-hook)
+-->
 
 Several hooks\helpers to work with device's screen.
 
