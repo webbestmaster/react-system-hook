@@ -22,5 +22,7 @@ export function useDocumentVisibility(): boolean {
         };
     }, [handleVisibilityChange]);
 
-    return useMemo((): boolean => isVisible, [isVisible]);
+    return useMemo((): boolean => {
+        return isVisible;
+    }, [isVisible]);
 }

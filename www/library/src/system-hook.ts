@@ -31,25 +31,25 @@ export function useSystem(): SystemHookType {
     const [name, setName] = useState<ScreenWidthNameEnum>(defaultName);
 
     const handleResize = useCallback(() => {
-        const {width: newWidth, height: newHeight} = getScreenSize();
+        const {width: updatedWidth, height: updatedHeight} = getScreenSize();
 
         const {
-            devicePixelRatio: newDevicePixelRatio,
-            isDesktop: newIsDesktop,
-            isLandscape: newIsLandscape,
-            isMobile: newIsMobile,
-            isPortrait: newIsPortrait,
-            isTablet: newIsTablet,
-            name: newName,
-        } = getScreenState(newWidth, newHeight);
+            devicePixelRatio: updatedDevicePixelRatio,
+            isDesktop: updatedIsDesktop,
+            isLandscape: updatedIsLandscape,
+            isMobile: updatedIsMobile,
+            isPortrait: updatedIsPortrait,
+            isTablet: updatedIsTablet,
+            name: updatedName,
+        } = getScreenState(updatedWidth, updatedHeight);
 
-        setDevicePixelRatio(newDevicePixelRatio);
-        setIsDesktop(newIsDesktop);
-        setIsLandscape(newIsLandscape);
-        setIsMobile(newIsMobile);
-        setIsPortrait(newIsPortrait);
-        setIsTablet(newIsTablet);
-        setName(newName);
+        setDevicePixelRatio(updatedDevicePixelRatio);
+        setIsDesktop(updatedIsDesktop);
+        setIsLandscape(updatedIsLandscape);
+        setIsMobile(updatedIsMobile);
+        setIsPortrait(updatedIsPortrait);
+        setIsTablet(updatedIsTablet);
+        setName(updatedName);
     }, []);
 
     useEffect(() => {

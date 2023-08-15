@@ -1,9 +1,5 @@
 /* global NodeJS, setTimeout, clearTimeout */
 
-// export function noop(): unknown {
-//     return;
-// }
-
 export function debounce<ArgsType extends Array<unknown>>(
     wrappedFunction: (...args: ArgsType) => unknown,
     waitInMs: number

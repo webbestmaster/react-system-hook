@@ -1,18 +1,16 @@
 /* global window, Event */
 /* eslint-disable sonarjs/no-duplicate-string */
 
-import assert from 'node:assert/strict';
-
-import {describe, test} from '@jest/globals';
+import {describe, it, expect} from '@jest/globals';
 
 import {render, act} from '@testing-library/react';
 
 import {useSystem, useScreenSize, useScreenWidth, useScreenHeight, useDocumentVisibility} from '../../library';
 import {waitForTime} from '../../../../test-unit/util';
 
-describe('System hooks', () => {
-    test('Just get all available data', async () => {
-        assert.equal(1, 1);
+describe('system hooks', () => {
+    it('just get all available data', async () => {
+        expect.assertions(0);
 
         function InnerComponent(): JSX.Element {
             const system = useSystem();

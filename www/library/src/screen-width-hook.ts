@@ -11,9 +11,9 @@ export function useScreenWidth(): number {
     const [width, setWidth] = useState<number>(defaultWidth);
 
     const handleResize = useCallback(() => {
-        const {width: newWidth} = getScreenSize();
+        const {width: updatedWidth} = getScreenSize();
 
-        setWidth(newWidth);
+        setWidth(updatedWidth);
     }, []);
 
     useEffect(() => {

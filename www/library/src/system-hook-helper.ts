@@ -1,4 +1,7 @@
+/* eslint-disable multiline-comment-style, capitalized-comments, line-comment-position, multiline-comment-style */
+
 /* global window, document */
+
 import {RectangleSizeType, ScreenWidthNameEnum, SystemScreenDataType} from './system-hook-type';
 import {defaultScreenSize, screenMinWidth} from './system-hook-const';
 
@@ -20,10 +23,6 @@ export function getScreenSize(): RectangleSizeType {
     }
 
     const {documentElement} = document;
-
-    if (!documentElement) {
-        return defaultScreenSize;
-    }
 
     const {clientWidth: width, clientHeight: height} = documentElement;
 

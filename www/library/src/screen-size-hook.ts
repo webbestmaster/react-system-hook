@@ -13,10 +13,10 @@ export function useScreenSize(): RectangleSizeType {
     const [height, setHeight] = useState<number>(defaultHeight);
 
     const handleResize = useCallback(() => {
-        const {width: newWidth, height: newHeight} = getScreenSize();
+        const {width: updatedWidth, height: updatedHeight} = getScreenSize();
 
-        setWidth(newWidth);
-        setHeight(newHeight);
+        setWidth(updatedWidth);
+        setHeight(updatedHeight);
     }, []);
 
     useEffect(() => {

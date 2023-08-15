@@ -11,9 +11,9 @@ export function useScreenHeight(): number {
     const [height, setHeight] = useState<number>(defaultHeight);
 
     const handleResize = useCallback(() => {
-        const {height: newHeight} = getScreenSize();
+        const {height: updatedHeight} = getScreenSize();
 
-        setHeight(newHeight);
+        setHeight(updatedHeight);
     }, []);
 
     useEffect(() => {
