@@ -1,14 +1,14 @@
 /* global window */
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from "react";
 
-import {debounce} from './util/function';
+import {debounce} from "./util/function";
 
-import {ScreenWidthNameEnum, SystemHookType, SystemScreenDataType} from './system-hook-type';
-import {getScreenSize, getScreenState} from './system-hook-helper';
+import {ScreenWidthNameEnum, SystemHookType, SystemScreenDataType} from "./system-hook-type";
+import {getScreenSize, getScreenState} from "./system-hook-helper";
 
 export function useSystem(): SystemHookType {
-    const isBrowser = typeof window !== 'undefined';
+    const isBrowser = typeof window !== "undefined";
 
     const {width: defaultWidth, height: defaultHeight} = getScreenSize();
 
@@ -55,10 +55,10 @@ export function useSystem(): SystemHookType {
     useEffect(() => {
         const handleResizeDebounced = debounce<[]>(handleResize, 150);
 
-        window.addEventListener('resize', handleResizeDebounced, {capture: false, passive: true});
+        window.addEventListener("resize", handleResizeDebounced, {capture: false, passive: true});
 
         return () => {
-            window.removeEventListener('resize', handleResizeDebounced, {capture: false});
+            window.removeEventListener("resize", handleResizeDebounced, {capture: false});
         };
     }, [handleResize]);
 

@@ -1,9 +1,9 @@
 /* global document */
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from "react";
 
-import {debounce} from './util/function';
-import {getDocumentIsVisible} from './util/system';
+import {debounce} from "./util/function";
+import {getDocumentIsVisible} from "./util/system";
 
 export function useDocumentVisibility(): boolean {
     const [isVisible, setIsVisible] = useState<boolean>(getDocumentIsVisible());
@@ -15,10 +15,10 @@ export function useDocumentVisibility(): boolean {
     useEffect(() => {
         const handleVisibilityChangeDebounced = debounce<[]>(handleVisibilityChange, 150);
 
-        document.addEventListener('visibilitychange', handleVisibilityChangeDebounced, {capture: false, passive: true});
+        document.addEventListener("visibilitychange", handleVisibilityChangeDebounced, {capture: false, passive: true});
 
         return () => {
-            document.removeEventListener('visibilitychange', handleVisibilityChangeDebounced, {capture: false});
+            document.removeEventListener("visibilitychange", handleVisibilityChangeDebounced, {capture: false});
         };
     }, [handleVisibilityChange]);
 

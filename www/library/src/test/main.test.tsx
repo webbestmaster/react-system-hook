@@ -1,15 +1,15 @@
 /* global window, Event */
 /* eslint-disable sonarjs/no-duplicate-string */
 
-import {describe, it, expect} from '@jest/globals';
+import {describe, it, expect} from "@jest/globals";
 
-import {render, act} from '@testing-library/react';
+import {render, act} from "@testing-library/react";
 
-import {useSystem, useScreenSize, useScreenWidth, useScreenHeight, useDocumentVisibility} from '../../library';
-import {waitForTime} from '../../../../test-unit/util';
+import {useSystem, useScreenSize, useScreenWidth, useScreenHeight, useDocumentVisibility} from "../../library";
+import {waitForTime} from "../../../../test-unit/util";
 
-describe('system hooks', () => {
-    it('just get all available data', async () => {
+describe("system hooks", () => {
+    it("just get all available data", async () => {
         expect.assertions(0);
 
         function InnerComponent(): JSX.Element {
@@ -33,8 +33,8 @@ describe('system hooks', () => {
         const {unmount} = render(<InnerComponent />);
 
         act(() => {
-            window.dispatchEvent(new Event('resize'));
-            window.document.dispatchEvent(new Event('visibilitychange'));
+            window.dispatchEvent(new Event("resize"));
+            window.document.dispatchEvent(new Event("visibilitychange"));
         });
 
         await waitForTime(1000);

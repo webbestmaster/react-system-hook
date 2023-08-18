@@ -2,8 +2,8 @@
 
 /* global window, document */
 
-import {RectangleSizeType, ScreenWidthNameEnum, SystemScreenDataType} from './system-hook-type';
-import {defaultScreenSize, screenMinWidth} from './system-hook-const';
+import {RectangleSizeType, ScreenWidthNameEnum, SystemScreenDataType} from "./system-hook-type";
+import {defaultScreenSize, screenMinWidth} from "./system-hook-const";
 
 export function getScreenName(screenWidth: number): ScreenWidthNameEnum {
     if (screenWidth >= screenMinWidth[ScreenWidthNameEnum.desktop]) {
@@ -18,7 +18,7 @@ export function getScreenName(screenWidth: number): ScreenWidthNameEnum {
 }
 
 export function getScreenSize(): RectangleSizeType {
-    if (typeof document === 'undefined') {
+    if (typeof document === "undefined") {
         return defaultScreenSize;
     }
 
@@ -32,7 +32,7 @@ export function getScreenSize(): RectangleSizeType {
 export function getDevicePixelRatio(): number {
     const defaultDevicePixelRatio = 2;
 
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
         return defaultDevicePixelRatio;
     }
 

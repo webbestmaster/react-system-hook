@@ -1,10 +1,10 @@
 /* global window */
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from "react";
 
-import {debounce} from './util/function';
-import {RectangleSizeType} from './system-hook-type';
-import {getScreenSize} from './system-hook-helper';
+import {debounce} from "./util/function";
+import {RectangleSizeType} from "./system-hook-type";
+import {getScreenSize} from "./system-hook-helper";
 
 export function useScreenSize(): RectangleSizeType {
     const {width: defaultWidth, height: defaultHeight} = getScreenSize();
@@ -22,10 +22,10 @@ export function useScreenSize(): RectangleSizeType {
     useEffect(() => {
         const handleResizeDebounced = debounce<[]>(handleResize, 150);
 
-        window.addEventListener('resize', handleResizeDebounced, {capture: false, passive: true});
+        window.addEventListener("resize", handleResizeDebounced, {capture: false, passive: true});
 
         return () => {
-            window.removeEventListener('resize', handleResizeDebounced, {capture: false});
+            window.removeEventListener("resize", handleResizeDebounced, {capture: false});
         };
     }, [handleResize]);
 

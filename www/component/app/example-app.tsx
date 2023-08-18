@@ -10,7 +10,7 @@ import {
     ScreenWidthNameEnum,
     screenMinWidth, // object: Record<ScreenWidthNameEnum, number>
     getScreenName, // (screenWidth: number) => ScreenWidthNameEnum
-} from '../../library/library';
+} from "../../library/library";
 
 export function ExampleApp(): JSX.Element {
     const {
@@ -46,7 +46,7 @@ export function ExampleApp(): JSX.Element {
             </pre>
             <pre>useScreenWidth = width: {screenWidth}</pre>
             <pre>useScreenHeight = height: {screenHeight}</pre>
-            <pre>useDocumentVisibility, is document visible: {isDocumentVisible ? 'yes' : 'no'}</pre>
+            <pre>useDocumentVisibility, is document visible: {isDocumentVisible ? "yes" : "no"}</pre>
         </div>
     );
 }
