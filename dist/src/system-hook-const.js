@@ -1,4 +1,4 @@
-import { ScreenWidthNameEnum } from './system-hook-type';
+import { ScreenWidthNameEnum } from "./system-hook-type";
 export const screenMinWidth = {
     [ScreenWidthNameEnum.desktop]: 1024,
     [ScreenWidthNameEnum.mobile]: 320,

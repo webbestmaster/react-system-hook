@@ -1,4 +1,4 @@
-import {RectangleSizeType, ScreenWidthNameEnum} from "./system-hook-type";
+import {type RectangleSizeType, ScreenWidthNameEnum} from "./system-hook-type";
 
 export const screenMinWidth: Record<ScreenWidthNameEnum, number> = {
     [ScreenWidthNameEnum.desktop]: 1024,

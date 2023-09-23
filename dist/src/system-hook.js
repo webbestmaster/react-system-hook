@@ -1,9 +1,9 @@
 /* global window */
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { debounce } from './util/function';
-import { getScreenSize, getScreenState } from './system-hook-helper';
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { debounce } from "./util/function";
+import { getScreenSize, getScreenState } from "./system-hook-helper";
 export function useSystem() {
-    const isBrowser = typeof window !== 'undefined';
+    const isBrowser = typeof window !== "undefined";
     const { width: defaultWidth, height: defaultHeight } = getScreenSize();
     const { devicePixelRatio: defaultDevicePixelRatio, isDesktop: defaultIsDesktop, isLandscape: defaultIsLandscape, isMobile: defaultIsMobile, isPortrait: defaultIsPortrait, isTablet: defaultIsTablet, name: defaultName, } = getScreenState(defaultWidth, defaultHeight);
     const [devicePixelRatio, setDevicePixelRatio] = useState(defaultDevicePixelRatio);
@@ -14,21 +14,21 @@ export function useSystem() {
     const [isTablet, setIsTablet] = useState(defaultIsTablet);
     const [name, setName] = useState(defaultName);
     const handleResize = useCallback(() => {
-        const { width: newWidth, height: newHeight } = getScreenSize();
-        const { devicePixelRatio: newDevicePixelRatio, isDesktop: newIsDesktop, isLandscape: newIsLandscape, isMobile: newIsMobile, isPortrait: newIsPortrait, isTablet: newIsTablet, name: newName, } = getScreenState(newWidth, newHeight);
-        setDevicePixelRatio(newDevicePixelRatio);
-        setIsDesktop(newIsDesktop);
-        setIsLandscape(newIsLandscape);
-        setIsMobile(newIsMobile);
-        setIsPortrait(newIsPortrait);
-        setIsTablet(newIsTablet);
-        setName(newName);
+        const { width: updatedWidth, height: updatedHeight } = getScreenSize();
+        const { devicePixelRatio: updatedDevicePixelRatio, isDesktop: updatedIsDesktop, isLandscape: updatedIsLandscape, isMobile: updatedIsMobile, isPortrait: updatedIsPortrait, isTablet: updatedIsTablet, name: updatedName, } = getScreenState(updatedWidth, updatedHeight);
+        setDevicePixelRatio(updatedDevicePixelRatio);
+        setIsDesktop(updatedIsDesktop);
+        setIsLandscape(updatedIsLandscape);
+        setIsMobile(updatedIsMobile);
+        setIsPortrait(updatedIsPortrait);
+        setIsTablet(updatedIsTablet);
+        setName(updatedName);
     }, []);
     useEffect(() => {
         const handleResizeDebounced = debounce(handleResize, 150);
-        window.addEventListener('resize', handleResizeDebounced, { capture: false, passive: true });
+        window.addEventListener("resize", handleResizeDebounced, { capture: false, passive: true });
         return () => {
-            window.removeEventListener('resize', handleResizeDebounced, { capture: false });
+            window.removeEventListener("resize", handleResizeDebounced, { capture: false });
         };
     }, [handleResize]);
     const screenInfo = useMemo(() => {

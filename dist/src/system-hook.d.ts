@@ -1,2 +1,2 @@
-import { SystemHookType } from './system-hook-type';
+import type { SystemHookType } from "./system-hook-type";
 export declare function useSystem(): SystemHookType;

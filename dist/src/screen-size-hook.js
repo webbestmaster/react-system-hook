@@ -1,21 +1,21 @@
 /* global window */
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { debounce } from './util/function';
-import { getScreenSize } from './system-hook-helper';
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { debounce } from "./util/function";
+import { getScreenSize } from "./system-hook-helper";
 export function useScreenSize() {
     const { width: defaultWidth, height: defaultHeight } = getScreenSize();
     const [width, setWidth] = useState(defaultWidth);
     const [height, setHeight] = useState(defaultHeight);
     const handleResize = useCallback(() => {
-        const { width: newWidth, height: newHeight } = getScreenSize();
-        setWidth(newWidth);
-        setHeight(newHeight);
+        const { width: updatedWidth, height: updatedHeight } = getScreenSize();
+        setWidth(updatedWidth);
+        setHeight(updatedHeight);
     }, []);
     useEffect(() => {
         const handleResizeDebounced = debounce(handleResize, 150);
-        window.addEventListener('resize', handleResizeDebounced, { capture: false, passive: true });
+        window.addEventListener("resize", handleResizeDebounced, { capture: false, passive: true });
         return () => {
-            window.removeEventListener('resize', handleResizeDebounced, { capture: false });
+            window.removeEventListener("resize", handleResizeDebounced, { capture: false });
         };
     }, [handleResize]);
     return useMemo(() => {

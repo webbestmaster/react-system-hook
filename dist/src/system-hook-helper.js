@@ -1,6 +1,7 @@
+/* eslint-disable multiline-comment-style, capitalized-comments, line-comment-position, multiline-comment-style */
 /* global window, document */
-import { ScreenWidthNameEnum } from './system-hook-type';
-import { defaultScreenSize, screenMinWidth } from './system-hook-const';
+import { ScreenWidthNameEnum } from "./system-hook-type";
+import { defaultScreenSize, screenMinWidth } from "./system-hook-const";
 export function getScreenName(screenWidth) {
     if (screenWidth >= screenMinWidth[ScreenWidthNameEnum.desktop]) {
         return ScreenWidthNameEnum.desktop;
@@ -11,19 +12,16 @@ export function getScreenName(screenWidth) {
     return ScreenWidthNameEnum.mobile;
 }
 export function getScreenSize() {
-    if (typeof document === 'undefined') {
+    if (typeof document === "undefined") {
         return defaultScreenSize;
     }
     const { documentElement } = document;
-    if (!documentElement) {
-        return defaultScreenSize;
-    }
     const { clientWidth: width, clientHeight: height } = documentElement;
     return { height, width };
 }
 export function getDevicePixelRatio() {
     const defaultDevicePixelRatio = 2;
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
         return defaultDevicePixelRatio;
     }
     const { devicePixelRatio } = window;
