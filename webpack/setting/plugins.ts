@@ -20,9 +20,8 @@ const filePathPrefix = isProduction ? "./../" : "./";
 const date = new Date();
 
 const definePluginParameters: Record<string, string> = {
-    // eslint-disable-next-line id-match
     // BUILD_DATE: JSON.stringify(date.getTime()),
-    // eslint-disable-next-line id-match
+
     BUILD_DATE_H: JSON.stringify(date.toISOString()),
     // NODE_ENV: JSON.stringify(NODE_ENV),
     IS_PRODUCTION: JSON.stringify(isProduction),
@@ -34,17 +33,22 @@ const definePluginParameters: Record<string, string> = {
 
 type StaticFilesDataType = Record<"from" | "to", string>;
 
-const staticFilesSiteList: Array<StaticFilesDataType> = ["favicon.ico"].map<StaticFilesDataType>(
-    (fileName: string): StaticFilesDataType => {
-        return {
-            from: `./www/${fileName}`,
-            to: `${filePathPrefix}${fileName}`,
-        };
-    }
-);
+const staticFilesSiteList: Array<StaticFilesDataType> = [
+    "favicon.ico",
+    "robots.txt",
+    "ads.txt",
+    "gss-0.9.xsl",
+    "manifest.json",
+    // 'index-500.html',
+].map<StaticFilesDataType>((fileName: string): StaticFilesDataType => {
+    return {
+        from: `./www/${fileName}`,
+        to: `${filePathPrefix}${fileName}`,
+    };
+});
 
 const duplicateCheckerPluginInstance: WebpackPluginInstance = {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     apply: (compiler: Compiler): void => {
         // eslint-disable-next-line no-undefined
         return undefined;

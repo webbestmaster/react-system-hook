@@ -21,7 +21,7 @@ export function useScreenWidth(): number {
 
         window.addEventListener("resize", handleResizeDebounced, {capture: false, passive: true});
 
-        return () => {
+        return (): undefined => {
             window.removeEventListener("resize", handleResizeDebounced, {capture: false});
         };
     }, [handleResize]);

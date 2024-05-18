@@ -17,7 +17,7 @@ export function useDocumentVisibility(): boolean {
 
         document.addEventListener("visibilitychange", handleVisibilityChangeDebounced, {capture: false, passive: true});
 
-        return () => {
+        return (): undefined => {
             document.removeEventListener("visibilitychange", handleVisibilityChangeDebounced, {capture: false});
         };
     }, [handleVisibilityChange]);

@@ -1,5 +1,4 @@
 /* global window, Event */
-/* eslint-disable sonarjs/no-duplicate-string */
 
 import {describe, it, expect} from "@jest/globals";
 

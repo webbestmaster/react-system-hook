@@ -1,5 +1,5 @@
-/* eslint-disable multiline-comment-style, capitalized-comments, line-comment-position, multiline-comment-style */
-/* eslint-disable no-unused-vars, @typescript-eslint/no-unused-vars */
+/* eslint-disable capitalized-comments */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import {
     useSystem,
