@@ -1,6 +1,6 @@
 {
   "name": "react-system-hook",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Several react hooks and helpers to work with device's screen",
   "keywords": [
     "system",

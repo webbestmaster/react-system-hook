@@ -39,6 +39,7 @@ import {
     ScreenWidthNameEnum,
     screenMinWidth, // object: Record<ScreenWidthNameEnum, number>
     getScreenName, // (screenWidth: number) => ScreenWidthNameEnum
+    getDocumentIsVisible, // () => boolean, it always returns `false` for server side rendering
 } from 'react-system-hook';
 
 export function ExampleApp(): JSX.Element {

@@ -6,4 +6,5 @@ export { useScreenHeight } from "./src/screen-height-hook";
 export { useDocumentVisibility } from "./src/document-visibility-hook";
 export { screenMinWidth } from "./src/system-hook-const";
 export { getScreenName } from "./src/system-hook-helper";
+export { getDocumentIsVisible } from "./src/util/system";
 //# sourceMappingURL=library.js.map
