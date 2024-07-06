@@ -1,7 +1,7 @@
 /* global window */
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { debounce } from "./util/function";
 import { getScreenSize, getScreenState } from "./system-hook-helper";
+import { debounce } from "./util/function";
 export function useSystem() {
     const isBrowser = typeof window !== "undefined";
     const { width: defaultWidth, height: defaultHeight } = getScreenSize();

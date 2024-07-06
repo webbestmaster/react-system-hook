@@ -1,7 +1,7 @@
 /* global window */
 import { useCallback, useEffect, useState } from "react";
-import { debounce } from "./util/function";
 import { getScreenSize } from "./system-hook-helper";
+import { debounce } from "./util/function";
 export function useScreenWidth() {
     const { width: defaultWidth } = getScreenSize();
     const [width, setWidth] = useState(defaultWidth);

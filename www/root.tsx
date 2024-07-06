@@ -3,8 +3,8 @@
 import {StrictMode} from "react";
 import {createRoot} from "react-dom/client";
 
-import {selector} from "./const";
 import {ExampleApp} from "./component/app/example-app";
+import {selector} from "./const";
 
 const nodeWrapper = document.querySelector(selector.appWrapper);
 

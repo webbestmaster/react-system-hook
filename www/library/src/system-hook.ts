@@ -2,10 +2,9 @@
 
 import {useCallback, useEffect, useMemo, useState} from "react";
 
-import {debounce} from "./util/function";
-
-import type {ScreenWidthNameEnum, SystemHookType, SystemScreenDataType} from "./system-hook-type";
 import {getScreenSize, getScreenState} from "./system-hook-helper";
+import type {ScreenWidthNameEnum, SystemHookType, SystemScreenDataType} from "./system-hook-type";
+import {debounce} from "./util/function";
 
 export function useSystem(): SystemHookType {
     const isBrowser = typeof window !== "undefined";

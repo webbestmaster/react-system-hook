@@ -2,9 +2,9 @@
 
 import {useCallback, useEffect, useMemo, useState} from "react";
 
-import {debounce} from "./util/function";
-import type {RectangleSizeType} from "./system-hook-type";
 import {getScreenSize} from "./system-hook-helper";
+import type {RectangleSizeType} from "./system-hook-type";
+import {debounce} from "./util/function";
 
 export function useScreenSize(): RectangleSizeType {
     const {width: defaultWidth, height: defaultHeight} = getScreenSize();

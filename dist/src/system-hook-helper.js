@@ -1,7 +1,7 @@
 /* eslint-disable capitalized-comments */
 /* global window, document */
-import { ScreenWidthNameEnum } from "./system-hook-type";
 import { defaultScreenSize, screenMinWidth } from "./system-hook-const";
+import { ScreenWidthNameEnum } from "./system-hook-type";
 export function getScreenName(screenWidth) {
     if (screenWidth >= screenMinWidth[ScreenWidthNameEnum.desktop]) {
         return ScreenWidthNameEnum.desktop;
