@@ -1,5 +1,6 @@
-/* eslint-disable capitalized-comments */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable capitalized-comments, sonarjs/unused-import, @typescript-eslint/no-unused-vars */
+
+import type {JSX} from "react";
 
 import {
     getScreenName, // (screenWidth: number) => ScreenWidthNameEnum

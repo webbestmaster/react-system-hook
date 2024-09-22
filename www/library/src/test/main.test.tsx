@@ -1,10 +1,11 @@
 /* global window, Event */
 
-import {describe, expect,it} from "@jest/globals";
-import {act,render} from "@testing-library/react";
+import {describe, expect, it} from "@jest/globals";
+import {act, render} from "@testing-library/react";
+import type {JSX} from "react";
 
 import {waitForTime} from "../../../../test-unit/util";
-import {useDocumentVisibility,useScreenHeight, useScreenSize, useScreenWidth, useSystem} from "../../library";
+import {useDocumentVisibility, useScreenHeight, useScreenSize, useScreenWidth, useSystem} from "../../library";
 
 describe("system hooks", () => {
     it("just get all available data", async () => {

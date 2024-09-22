@@ -5,6 +5,6 @@ export {useScreenWidth} from "./src/screen-width-hook";
 export {useSystem} from "./src/system-hook";
 export {screenMinWidth} from "./src/system-hook-const";
 export {getScreenName} from "./src/system-hook-helper";
-export type {RectangleSizeType,SystemHookType, SystemScreenDataType} from "./src/system-hook-type";
+export type {RectangleSizeType, SystemHookType, SystemScreenDataType} from "./src/system-hook-type";
 export {ScreenWidthNameEnum} from "./src/system-hook-type";
 export {getDocumentIsVisible} from "./src/util/system";
